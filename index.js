@@ -1,18 +1,15 @@
-// Diamond pattern using nested loops
 
-let n = 5;
+const DIAMOND_SIZE = 5;
 
-// Upper part
-for (let i = 1; i <= n; i++) {
-
+function generateRow(spaces, stars) {
   let row = "";
 
-  for (let j = 1; j <= n - i; j++) {
+  for (let i = 0; i < spaces; i++) {
     row += " ";
   }
 
-  for (let j = 1; j <= 2 * i - 1; j++) {
-    if (j === 1 || j === 2 * i - 1) {
+  for (let i = 1; i <= 2 * stars - 1; i++) {
+    if (i === 1 || i === 2 * stars - 1) {
       row += "*";
     } else {
       row += " ";
@@ -22,22 +19,10 @@ for (let i = 1; i <= n; i++) {
   console.log(row);
 }
 
-// Lower part
-for (let i = n - 1; i >= 1; i--) {
 
-  let row = "";
-
-  for (let j = 1; j <= n - i; j++) {
-    row += " ";
-  }
-
-  for (let j = 1; j <= 2 * i - 1; j++) {
-    if (j === 1 || j === 2 * i - 1) {
-      row += "*";
-    } else {
-      row += " ";
-    }
-  }
-
-  console.log(row);
+for (let i = 1; i <= DIAMOND_SIZE; i++) {
+  generateRow(DIAMOND_SIZE - i, i);
+}
+for (let i = DIAMOND_SIZE - 1; i >= 1; i--) {
+  generateRow(DIAMOND_SIZE - i, i);
 }
