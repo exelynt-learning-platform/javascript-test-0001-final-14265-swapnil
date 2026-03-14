@@ -1,2 +1,7 @@
-# javascript-test-0001-final-14265-swapnil
-Final Project Assignment - This repository contains the complete final project code and documentation.
+# JavaScript Diamond Pattern
+
+This project prints a hollow diamond star pattern using JavaScript nested loops.
+
+Run the program:
+
+node index.js
